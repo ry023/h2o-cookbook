@@ -44,6 +44,8 @@ when 'debian'
   default['h2o']['repository_distribution'] = "#{node['lsb']['codename']}-backports"
 end
 
+default['h2o']['skip_add_repository'] = false
+
 # source
 default['h2o']['download_version']   = '2.2.5'
 default['h2o']['download_url']       = "https://github.com/h2o/h2o/archive/v#{node['h2o']['download_version']}.zip"

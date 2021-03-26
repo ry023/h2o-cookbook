@@ -6,7 +6,7 @@ if node['h2o']['build']
   include_recipe 'h2o::source'
 
 else
-  include_recipe 'h2o::repository'
+  include_recipe 'h2o::repository' unless node['h2o']['skip_add_repository']
 
   group node['h2o']['group'] do
     system true
